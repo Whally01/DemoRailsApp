@@ -12,8 +12,7 @@ class QuoteController < ApplicationController
 	end
 
 	def show
-	 	@quote = Quote.first
-	 	puts @quote 
+	 	@quote = Quote.all
 	 	render json: @quote
 	end
  end
