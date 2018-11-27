@@ -7,7 +7,8 @@ class TestJob < ActiveJob::Base
   	response = RestClient.get('https://api.tronalddump.io/random/quote')
 	hash = JSON.parse(response)
 	value = hash["value"]
-	source = hash["source"]
-	@quote = Quote.create(value:value, source:source)
+	tags = hash["tags"]
+	@quote = Quote.create(value:value, tags:tags)
+ 	render json: @quote
   end
 end

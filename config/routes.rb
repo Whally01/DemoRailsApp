@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  apipie
 	get '/load', to: 'quote#load'
-	get '/all', to: 'quote#show'
+	get '/quotes', to: 'quote#show'
 end
