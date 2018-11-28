@@ -2,7 +2,7 @@
 require 'rest-client'
 require 'json'
 class QuotesController < ApplicationController
-	# api :GET, '/load', "LOAD quote from outside "
+	api :GET, '/load', "LOAD quote from outside "
 	def load
 	 	response = RestClient.get('https://api.tronalddump.io/random/quote')
 	 	hash = JSON.parse(response)

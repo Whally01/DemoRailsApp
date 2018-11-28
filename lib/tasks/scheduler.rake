@@ -5,5 +5,4 @@ task :update_quote => :environment do
 	value = hash["value"]
 	tags = hash["tags"]
 	@quote = Quote.create(value:value, tags:tags)
- 	render json: @quote
 end
