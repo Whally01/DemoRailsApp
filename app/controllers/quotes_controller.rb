@@ -11,7 +11,8 @@ class QuotesController < ApplicationController
 	 	@quote = Quote.create(value:value, tags:tags)
  		render json: @quote
 	end
-
+ 
+ 
 	# api :GET, '/json/quotes', "GET all quotes JSON API"
 	# def show
 	#  	@quote = Quote.all
